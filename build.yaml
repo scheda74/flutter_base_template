@@ -1,3 +1,5 @@
+# This is used by the build system to generate the json serialization code.
+# explicit_to_json needs to be true to generate toJson methods for all classes otherwise this will fail. (Thank me later)
 targets:
   $default:
     builders:

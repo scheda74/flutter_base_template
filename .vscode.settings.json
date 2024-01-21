@@ -1,0 +1,30 @@
+{
+    "git.autofetch": true,
+    "editor.guides.bracketPairs": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.renderWhitespace": "all",
+    "editor.formatOnSave": true,
+    "workbench.iconTheme": "vscode-icons",
+    "dart.flutterGenerateLocalizationsOnSave": "all",
+    "dart.flutterHotReloadOnSave": "allIfDirty",
+    "dart.previewFlutterUiGuides": true,
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.codeActionsOnSave": {
+            "quickfix.insertSemicolon": true,
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    "files.autoSave": "onFocusChange",
+    "explorer.confirmDragAndDrop": false,
+    "git.openRepositoryInParentFolders": "never",
+    "dart.renameFilesWithClasses": "prompt",
+    "dart.hotReloadOnSave": "manualIfDirty",
+    "git.confirmSync": false
+}
