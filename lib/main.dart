@@ -1,21 +1,22 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_base_template/shared/providers/global_provider_observers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:tracker_logger_bundle/tracker_logger_bundle.dart';
 
 import 'app_entry.dart';
+import 'shared/providers/global_provider_observers.dart';
 
 Future<void> main() async {
   runZonedGuarded<Future<void>>(
     () async {
       WidgetsFlutterBinding.ensureInitialized();
 
-      Log.instance.initialize(
+      await Log.instance.initialize(
+        matomoOptions: const MatomoOptions(siteId: 69, url: 'your matomo url'),
         sentryConfig: SentryConfig(
           optionsConfiguration: (options) {
+            options.dsn = '';
             // options.dsn = kDebugMode ? '' : F.sentryKey;
             // Set tracesSampleRate to 1.0 to capture 100% of transactions for performance monitoring.
             // We recommend adjusting this value in production.
@@ -30,8 +31,9 @@ Future<void> main() async {
         ),
       );
     },
-    (error, stack) async => await Sentry.captureException(
-      error,
+    (error, stack) async => Log.instance.logError(
+      'Uncaught error in zonedGuarded',
+      error: error,
       stackTrace: stack,
     ),
   );
