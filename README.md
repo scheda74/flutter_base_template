@@ -105,7 +105,6 @@ I recommend the following extensions:
 
 I want to add / update the following in the near future:
 
-- Remove the loggers from utils and create its own package
 - Add more useful widgets
 - Add a generic oauth client
 - Add biometric authentication

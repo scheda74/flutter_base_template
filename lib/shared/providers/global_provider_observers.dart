@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:tracker_logger_bundle/tracker_logger_bundle.dart';
 
 import '../../app_entry.dart';
-import '../utils/logger/loggers.dart';
 
 class GlobalProviderObservers extends ProviderObserver {
   @override
@@ -12,7 +12,7 @@ class GlobalProviderObservers extends ProviderObserver {
     Object? newValue,
     ProviderContainer container,
   ) {
-    // Loggers.instance.logEvent(
+    // Log.instance.logEvent(
     //   'Provider $provider updated from $previousValue to $newValue',
     //   level: LogLevel.debug,
     // );
@@ -40,7 +40,7 @@ class GlobalProviderObservers extends ProviderObserver {
     Object error,
     StackTrace stackTrace,
   ) {
-    Loggers.instance.logError(
+    Log.instance.logError(
       'Provider $provider threw $error at $stackTrace',
       error: error,
       stackTrace: stackTrace,

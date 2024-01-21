@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  tracker_logger_bundle:
+    path: /Users/vorfina/Development/tracker_logger_bundle
   flutter_localizations:
     sdk: flutter
   intl: ^0.18.1

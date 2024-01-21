@@ -8,25 +8,21 @@ typedef ApiCallShortcut<T> = Future<T> Function(
 );
 
 // extension ProviderApiCall on Ref {
-//   /// convenience function in providers that retrieves the [tenantId],
-//   /// [userId] and [apiClient] and passes them to the given api call
 //   Future<T> apiCall<T>(ApiCallShortcut<T> call) async {
 //     final userId = 'TODO: userId',
 //     final apiClient = read(authClientProvider);
 
-//     return await call(tenantId, userId, apiClient);
+//     return await call(userId, apiClient);
 //   }
 // }
 
 // extension WidgetApiCall on WidgetRef {
-//   /// convenience function in widgets that retrieves the [tenantId],
-//   /// [userId] and [apiClient] and passes them to the given api call
 //   Future<T> apiCall<T>(ApiCallShortcut<T> call) async {
-//     final tenantId = read(brandingProvider).tenantId;
+
 //     final userId = await read(userProvider.future);
 //     final apiClient = read(apiClientProvider);
 
-//     return await call(tenantId, userId, apiClient);
+//     return await call(userId, apiClient);
 //   }
 // }
 
