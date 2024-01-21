@@ -8,20 +8,17 @@ Welcome to the Flutter Template Repository! This repository serves as a starting
 
 Make sure you have Flutter and Dart installed on your machine. If not, follow the [official Flutter installation guide](https://flutter.dev/docs/get-started/install).
 
-### Clone the Repository
+## Install dependencies
 
 ```bash
-git clone https://github.com/scheda74/flutter_base_template.git
-cd flutter_base_template
-```
-
-## Install dependecies
-
 flutter pub get
+```
 
 ## Run the app
 
+```bash
 flutter run
+```
 
 ## Features
 
@@ -76,7 +73,7 @@ A collection of commonly used custom widgets like loading skeletons is provided 
 ### 5. Code generation
 
 For both riverpod and freezed we use code generation via `build_runner`. This makes it way easier and faster to get all the boilerplate code for your providers or your json serializable and immutable models.
-See [models](/lib/shared/models) or [providers]() directory
+See [models](/lib/shared/models) or [providers](/lib/shared/providers) directory
 
 ## VSCode Extensions & Convenience
 
@@ -103,6 +100,15 @@ I recommend the following extensions:
 - Awesome Flutter Snippets
 - Pubspec Assist
 - Build Runner
+
+## Roadmap & TODOs
+
+I want to add / update the following in the near future:
+
+- Remove the loggers from utils and create its own package
+- Add more useful widgets
+- Add a generic oauth client
+- Add biometric authentication
 
 ## Contributing
 
